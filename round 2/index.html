@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INLIGHN TECH - Transform Your Career with Immersive Internships</title>
+    <meta name="description" content="Gain real-world experience with our immersive internship programs in Cyber Security, Full Stack Development, Data Science, and Data Analysis. Learn today, lead tomorrow.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/modern-animations.css">
+    <link rel="stylesheet" href="styles/stacked-cards.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Three.js for 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="assets/inlighn-tech-logo.png" alt="INLIGHN TECH" class="logo-image">
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <img src="assets/logo-small.svg" alt="INLIGHN TECH" class="nav-logo-image">
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#programs" class="nav-link">Programs</a>
+                <a href="#verify" class="nav-link">Verify Certificate</a>
+                <a href="#special" class="nav-link">What's Special</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+                <a href="#portal" class="nav-link portal-btn">Login to Portal</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title reveal-text">
+                    <span class="title-line">Transform Your Career</span>
+                    <span class="title-line">with INLIGHN TECH</span>
+                </h1>
+                <p class="hero-subtitle reveal-text">
+                    Gain real-world experience with our immersive internship programs in Cyber Security, 
+                    Full Stack Development, Data Science, Data Analysis and various tech domains. 
+                    Learn today, lead tomorrow.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#programs" class="btn btn-primary" data-original-text="Explore Internships">Explore Internships</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="card card-1">
+                        <div class="card-icon">🔒</div>
+                        <div class="card-text">Cyber Security</div>
+                    </div>
+                    <div class="card card-2">
+                        <div class="card-icon">💻</div>
+                        <div class="card-text">Full Stack Dev</div>
+                    </div>
+                    <div class="card card-3">
+                        <div class="card-icon">📊</div>
+                        <div class="card-text">Data Science</div>
+                    </div>
+                    <div class="card card-4">
+                        <div class="card-icon">📈</div>
+                        <div class="card-text">Data Analysis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">WHO WE ARE</h2>
+                <div class="section-subtitle reveal-text">About INLIGHN TECH</div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description reveal-text">
+                        At INLIGHN TECH, we believe that the future of education lies in bridging the gap 
+                        between academic learning and industry needs. Founded with a passion for providing 
+                        meaningful and immersive learning experiences, we offer internship programs that 
+                        equip students and young professionals with practical skills in Full Stack Development, 
+                        Data Science, and Project Management.
+                    </p>
+                    
+                    <div class="mission-vision">
+                        <div class="mission reveal-text">
+                            <h3>Our Mission</h3>
+                            <p>To empower students and young professionals by providing immersive, real-world 
+                            learning experiences through tailored internship programs. We aim to equip our 
+                            participants with the practical skills and confidence they need to succeed in 
+                            the fast-evolving tech industry.</p>
+                        </div>
+                        
+                        <div class="vision reveal-text">
+                            <h3>Our Vision</h3>
+                            <p>To become the leading platform for practical tech education, bridging the gap 
+                            between academic knowledge and industry requirements, creating a new generation 
+                            of tech professionals ready to innovate and lead.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-item reveal-text">
+                        <div class="stat-number animated-title" data-target="1000">0</div>
+                        <div class="stat-label">Interns Enrolled</div>
+                        <div class="stat-icon">🎓</div>
+                    </div>
+                    <div class="stat-item reveal-text">
+                        <div class="stat-number animated-title" data-target="500">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                        <div class="stat-icon">💼</div>
+                    </div>
+                    <div class="stat-item reveal-text">
+                        <div class="stat-number animated-title" data-target="98">0</div>
+                        <div class="stat-label">Satisfaction Rate %</div>
+                        <div class="stat-icon">📈</div>
+                    </div>
+                    <div class="stat-item reveal-text">
+                        <div class="stat-number animated-title" data-target="50">0</div>
+                        <div class="stat-label">Top Instructors</div>
+                        <div class="stat-icon">👨‍🏫</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs-section">
+        <div class="programs-container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">OUR PROGRAMS</h2>
+                <div class="section-subtitle reveal-text">Choose Your Path to Success</div>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card-flip" data-program="cybersecurity">
+                    <div class="program-card-flip-inner">
+                        <!-- Front Side -->
+                        <div class="program-card-front">
+                            <div class="program-card-front-top">
+                                <span class="program-card-front-top-title">Cyber Security</span>
+                                <div class="program-card-front-top-icon"></div>
+                            </div>
+                            <div class="program-card-front-visual">
+                                <div class="program-card-front-visual-icon">🔒</div>
+                            </div>
+                            <div class="program-card-front-bottom">
+                                <div class="program-card-front-bottom-wrap">
+                                    <div class="program-card-front-bottom-icon"></div>
+                                    <span class="program-card-front-bottom-footnote">CS-101</span>
+                                    <div class="program-card-front-bottom-ce"></div>
+                                </div>
+                                <span class="program-card-front-text">Cyber Security</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Back Side -->
+                        <div class="program-card-back">
+                            <div class="program-card-back-top">
+                                <h3 class="program-card-back-top-title">Cyber Security</h3>
+                                <div class="program-card-back-top-icon"></div>
+                            </div>
+                            <div class="program-card-back-content">
+                                <ul class="program-card-back-list">
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Network Security & Penetration Testing</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Ethical Hacking & Vulnerability Assessment</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Security Analysis & Incident Response</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Cryptography & Digital Forensics</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="program-card-back-bottom">
+                                <div class="program-card-back-bottom-icon"></div>
+                                <span class="program-card-back-text">Cyber Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="program-card-flip" data-program="fullstack">
+                    <div class="program-card-flip-inner">
+                        <!-- Front Side -->
+                        <div class="program-card-front">
+                            <div class="program-card-front-top">
+                                <span class="program-card-front-top-title">Full Stack Development</span>
+                                <div class="program-card-front-top-icon"></div>
+                            </div>
+                            <div class="program-card-front-visual">
+                                <div class="program-card-front-visual-icon">💻</div>
+                            </div>
+                            <div class="program-card-front-bottom">
+                                <div class="program-card-front-bottom-wrap">
+                                    <div class="program-card-front-bottom-icon"></div>
+                                    <span class="program-card-front-bottom-footnote">FS-101</span>
+                                    <div class="program-card-front-bottom-ce"></div>
+                                </div>
+                                <span class="program-card-front-text">Full Stack Dev</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Back Side -->
+                        <div class="program-card-back">
+                            <div class="program-card-back-top">
+                                <h3 class="program-card-back-top-title">Full Stack Development</h3>
+                                <div class="program-card-back-top-icon"></div>
+                            </div>
+                            <div class="program-card-back-content">
+                                <ul class="program-card-back-list">
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">React, Node.js & Modern Frameworks</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">MongoDB, APIs & Database Design</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Web Applications & Cloud Deployment</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">DevOps & CI/CD Pipelines</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="program-card-back-bottom">
+                                <div class="program-card-back-bottom-icon"></div>
+                                <span class="program-card-back-text">Full Stack Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="program-card-flip" data-program="datascience">
+                    <div class="program-card-flip-inner">
+                        <!-- Front Side -->
+                        <div class="program-card-front">
+                            <div class="program-card-front-top">
+                                <span class="program-card-front-top-title">Data Science</span>
+                                <div class="program-card-front-top-icon"></div>
+                            </div>
+                            <div class="program-card-front-visual">
+                                <div class="program-card-front-visual-icon">📊</div>
+                            </div>
+                            <div class="program-card-front-bottom">
+                                <div class="program-card-front-bottom-wrap">
+                                    <div class="program-card-front-bottom-icon"></div>
+                                    <span class="program-card-front-bottom-footnote">DS-101</span>
+                                    <div class="program-card-front-bottom-ce"></div>
+                                </div>
+                                <span class="program-card-front-text">Data Science</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Back Side -->
+                        <div class="program-card-back">
+                            <div class="program-card-back-top">
+                                <h3 class="program-card-back-top-title">Data Science</h3>
+                                <div class="program-card-back-top-icon"></div>
+                            </div>
+                            <div class="program-card-back-content">
+                                <ul class="program-card-back-list">
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Machine Learning & Deep Learning</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Data Visualization & Storytelling</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">AI Models & Natural Language Processing</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Statistical Analysis & Predictive Modeling</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="program-card-back-bottom">
+                                <div class="program-card-back-bottom-icon"></div>
+                                <span class="program-card-back-text">Data Science</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="program-card-flip" data-program="dataanalysis">
+                    <div class="program-card-flip-inner">
+                        <!-- Front Side -->
+                        <div class="program-card-front">
+                            <div class="program-card-front-top">
+                                <span class="program-card-front-top-title">Data Analysis</span>
+                                <div class="program-card-front-top-icon"></div>
+                            </div>
+                            <div class="program-card-front-visual">
+                                <div class="program-card-front-visual-icon">📈</div>
+                            </div>
+                            <div class="program-card-front-bottom">
+                                <div class="program-card-front-bottom-wrap">
+                                    <div class="program-card-front-bottom-icon"></div>
+                                    <span class="program-card-front-bottom-footnote">DA-101</span>
+                                    <div class="program-card-front-bottom-ce"></div>
+                                </div>
+                                <span class="program-card-front-text">Data Analysis</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Back Side -->
+                        <div class="program-card-back">
+                            <div class="program-card-back-top">
+                                <h3 class="program-card-back-top-title">Data Analysis</h3>
+                                <div class="program-card-back-top-icon"></div>
+                            </div>
+                            <div class="program-card-back-content">
+                                <ul class="program-card-back-list">
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">SQL, Power BI & Advanced Analytics</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Tableau & Data Visualization</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Data Cleaning & ETL Processes</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Business Intelligence & Reporting</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="program-card-back-bottom">
+                                <div class="program-card-back-bottom-icon"></div>
+                                <span class="program-card-back-text">Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="program-card-flip" data-program="cloudcomputing">
+                    <div class="program-card-flip-inner">
+                        <!-- Front Side -->
+                        <div class="program-card-front">
+                            <div class="program-card-front-top">
+                                <span class="program-card-front-top-title">Cloud Computing</span>
+                                <div class="program-card-front-top-icon"></div>
+                            </div>
+                            <div class="program-card-front-visual">
+                                <div class="program-card-front-visual-icon">☁️</div>
+                            </div>
+                            <div class="program-card-front-bottom">
+                                <div class="program-card-front-bottom-wrap">
+                                    <div class="program-card-front-bottom-icon"></div>
+                                    <span class="program-card-front-bottom-footnote">CC-101</span>
+                                    <div class="program-card-front-bottom-ce"></div>
+                                </div>
+                                <span class="program-card-front-text">Cloud Computing</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Back Side -->
+                        <div class="program-card-back">
+                            <div class="program-card-back-top">
+                                <h3 class="program-card-back-top-title">Cloud Computing</h3>
+                                <div class="program-card-back-top-icon"></div>
+                            </div>
+                            <div class="program-card-back-content">
+                                <ul class="program-card-back-list">
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">AWS, Azure & Google Cloud Platform</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Containerization & Kubernetes</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Serverless Architecture & Microservices</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Cloud Security & DevOps Practices</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="program-card-back-bottom">
+                                <div class="program-card-back-bottom-icon"></div>
+                                <span class="program-card-back-text">Cloud Computing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="program-card-flip" data-program="ai-ml">
+                    <div class="program-card-flip-inner">
+                        <!-- Front Side -->
+                        <div class="program-card-front">
+                            <div class="program-card-front-top">
+                                <span class="program-card-front-top-title">AI & Machine Learning</span>
+                                <div class="program-card-front-top-icon"></div>
+                            </div>
+                            <div class="program-card-front-visual">
+                                <div class="program-card-front-visual-icon">🤖</div>
+                            </div>
+                            <div class="program-card-front-bottom">
+                                <div class="program-card-front-bottom-wrap">
+                                    <div class="program-card-front-bottom-icon"></div>
+                                    <span class="program-card-front-bottom-footnote">AI-101</span>
+                                    <div class="program-card-front-bottom-ce"></div>
+                                </div>
+                                <span class="program-card-front-text">AI & ML</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Back Side -->
+                        <div class="program-card-back">
+                            <div class="program-card-back-top">
+                                <h3 class="program-card-back-top-title">AI & Machine Learning</h3>
+                                <div class="program-card-back-top-icon"></div>
+                            </div>
+                            <div class="program-card-back-content">
+                                <ul class="program-card-back-list">
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Neural Networks & Deep Learning</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Computer Vision & Image Processing</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">Natural Language Processing & Chatbots</div>
+                                    </li>
+                                    <li class="program-card-back-list-item">
+                                        <div class="program-card-back-list-text">AI Ethics & Responsible AI Development</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="program-card-back-bottom">
+                                <div class="program-card-back-bottom-icon"></div>
+                                <span class="program-card-back-text">AI & ML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="programs-scroll-indicator">
+                Scroll to explore programs
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="special" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">WHY CHOOSE US?</h2>
+                <div class="section-subtitle reveal-text">What Makes Us Different</div>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card reveal-text">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Real-World Projects</h3>
+                    <p>Gain hands-on experience with real industry projects and build a portfolio that stands out.</p>
+                </div>
+                
+                <div class="feature-card reveal-text">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Expert Mentorship</h3>
+                    <p>Learn from seasoned professionals who guide you through every step of your journey.</p>
+                </div>
+                
+                <div class="feature-card reveal-text">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Certified Programs</h3>
+                    <p>Complete the programs and get certified in your field to showcase your skills.</p>
+                </div>
+                
+                <div class="feature-card reveal-text">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Flexible Learning</h3>
+                    <p>Do at your own pace with online programs designed to fit your schedule.</p>
+                </div>
+                
+                <div class="feature-card reveal-text">
+                    <div class="feature-icon">💼</div>
+                    <h3>Career Support</h3>
+                    <p>We go beyond training. Our career services include portfolio reviews, interview prep, and connections with industry professionals.</p>
+                </div>
+                
+                <div class="feature-card reveal-text">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Tailored Programs</h3>
+                    <p>Our courses are crafted with a focus on hands-on, practical learning tailored to industry needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">TESTIMONIALS</h2>
+                <div class="section-subtitle reveal-text">What Our Interns Say</div>
+            </div>
+            
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"During my Data Analytics internship at INLIGHN TECH, I learned SQL, Power BI, Tableau, and Data Cleaning. The program focused on real-world business intelligence projects, which helped me understand data-driven decision-making. The mentorship and structured learning approach made a significant impact on my skills."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>Mirunalini R</h4>
+                            <span>Data Analyst Intern</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I completed my Data Science internship at INLIGHN TECH, where I gained hands-on experience in Machine Learning, Data Visualization, and AI Models. Working on real-world datasets helped me apply my knowledge in a practical way. The structured guidance and expert mentorship improved my problem-solving and analytical skills."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <h4>Surendra Kumar</h4>
+                            <span>Data Science Intern (India)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"At INLIGHN TECH, I completed my Full-Stack Development internship, where I worked on React, Node.js, MongoDB, and API development. I built web applications from scratch, which helped me understand both frontend and backend development. The real-world exposure and expert guidance made me industry-ready."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">HR</div>
+                        <div class="author-info">
+                            <h4>Hariharan Rajendaran</h4>
+                            <span>Full-Stack Developer Intern</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-controls">
+                <button class="control-btn prev" id="prev-testimonial">‹</button>
+                <div class="testimonial-dots" id="testimonial-dots"></div>
+                <button class="control-btn next" id="next-testimonial">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verify Certificate Section -->
+    <section id="verify" class="verify-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">VERIFY CERTIFICATE</h2>
+                <div class="section-subtitle reveal-text">Authenticate Your Achievement</div>
+            </div>
+            
+            <div class="verify-content">
+                <div class="verify-form">
+                    <form id="certificate-form">
+                        <div class="form-group">
+                            <label for="certificate-id">Certificate ID</label>
+                            <input type="text" id="certificate-id" name="certificate-id" placeholder="Enter your certificate ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Verify Certificate</button>
+                    </form>
+                </div>
+                
+                <div class="verify-info">
+                    <h3>How to Verify</h3>
+                    <ol>
+                        <li>Enter your unique certificate ID</li>
+                        <li>Provide your registered email address</li>
+                        <li>Click verify to authenticate your certificate</li>
+                        <li>View and download your verified certificate</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">GET IN TOUCH</h2>
+                <div class="section-subtitle reveal-text">Fill the form to contact us</div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email *</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="domain">Domain of Internship *</label>
+                                <select id="domain" name="domain" required>
+                                    <option value="">Select Domain</option>
+                                    <option value="cybersecurity">Cyber Security</option>
+                                    <option value="fullstack">Full Stack Development</option>
+                                    <option value="datascience">Data Science</option>
+                                    <option value="dataanalysis">Data Analysis</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h4>Corporate Office</h4>
+                            <p>Office No: VO-301, WeWork Prestige Central, Ground Floor, 36, Infantry Rd, Tasker Town, Shivaji Nagar, Bengaluru, Karnataka 560001</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p>+91 9368842663</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>info@inlighntech.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>INLIGHN TECH</h3>
+                    <p>At INLIGHN TECH, we believe that the future of education lies in bridging the gap between academic learning and industry needs.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#portal">Login To Portal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Term & Conditions</a></li>
+                        <li><a href="#disclaimer">Disclaimer</a></li>
+                        <li><a href="#faq">FAQ's</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 INLIGHN TECH | All Rights Reserved | Design By Gdscreatives</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portal Modal -->
+    <div id="portal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to Portal</h2>
+            <form id="portal-form">
+                <div class="form-group">
+                    <label for="portal-email">Email</label>
+                    <input type="email" id="portal-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="portal-password">Password</label>
+                    <input type="password" id="portal-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/3d-background.js"></script>
+    <script src="js/enhanced-interactions.js"></script>
+    <script src="js/stacked-cards.js"></script>
+    <script src="js/counter-animation.js"></script>
+</body>
+</html> 

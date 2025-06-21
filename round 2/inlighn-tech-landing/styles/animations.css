@@ -1,0 +1,19 @@
+<!-- Add meaningful content in the About section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">About Inlighn Tech</h2>
+            <p class="section-subtitle">Empowering the next generation of tech professionals</p>
+        </div>
+        <div class="about-content">
+            <div class="about-description">
+                <p>At Inlighn Tech, we provide immersive internship programs designed to equip students with the skills needed in today's tech industry.</p>
+                <p>Our hands-on approach ensures that you gain real-world experience while working on cutting-edge projects.</p>
+            </div>
+            <div class="about-stats">
+                <p>Over 500 successful graduates</p>
+                <p>Partnerships with leading tech companies</p>
+            </div>
+        </div>
+    </div>
+</section>
